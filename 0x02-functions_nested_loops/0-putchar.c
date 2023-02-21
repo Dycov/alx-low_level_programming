@@ -1,5 +1,11 @@
 #include "Nairobi.h"
 
+/**
+ * main - program that prints Nairobi.
+ *
+ * Return: int
+ */
+
 int main(void)
 {
 	int n = 0;
