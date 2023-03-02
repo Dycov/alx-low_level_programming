@@ -1,24 +1,28 @@
 #include "main.h"
 
 /**
- * _strncpy - function that copies a string.
+ * _strncat- function that concatenates two strings.
  *
  * @dest: pointer to destination char
  * @src: pointer to source char
- * @n: number of bytes
+ * @n: number of bytes to receive
  * Return: char
  */
 
-	char *_strncpy(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
+	unsigned int i = 0;
+	int j = 0;
 
-	while (i < n && *(src + i) != '\0')
-	{
-		*(dest + i) = *(src + i);
+	while (*(dest + i) != '\0')
 		i++;
+	while (*(src + j) != '\0')
+	{
+		if (j < n)
+		{
+			*(dest + i) = *(src + j);
+			i++;
+		}
+		j++;
 	}
-	while (i != n)
-		dest[i++] = '\0';
 	return (dest);
-}
