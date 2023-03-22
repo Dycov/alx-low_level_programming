@@ -2,15 +2,18 @@
 #include "main.h"
 
 /**
- * print_name_as_is - prints a name as is
- * @name: name of the person
- *
- * Return: Nothing.
+ * print_name - calls another function to print name
+ * @name: pointer to string name to print
+ * @f: pointer to function that prints
+ * Return: void
  */
+
 int main()
-void print_name(char *name);
+void print_name(char *name, void (*f)(char)
+		
 {
-	printf("My name is %s\n", name);
+	if (name && f)
+		f(name)
 
 	return(0)
 }
