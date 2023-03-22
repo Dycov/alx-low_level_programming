@@ -15,3 +15,11 @@ int main(int argc, char **argv)
 	printf("Error\n");
 	return (98);
 }
+#ifndef _3-CALC_H
+#define _3CALC_H
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+#endif 
