@@ -1,25 +1,23 @@
-#include "3-calc.h"
+#ifndef _3_CALC_H_
+#define _3_CALC_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
- * main - follows instructions of input operation
- * @argc: count of inputs
- * @argv: array of inputs
- * Return: 0 success
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
  */
-int main(int argc, char **argv)
+typedef struct op
 {
-	if (argc == 4)
-	{
-		printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
-		return (0);
-	}
-	printf("Error\n");
-	return (98);
-}
-#ifndef _3-CALC_H
-#define _3CALC_H
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 int op_add(int a, int b);
 int op_sub(int a, int b);
 int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
 #endif 
